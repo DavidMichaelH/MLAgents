@@ -54,8 +54,7 @@ for episode in range(20):
   done = False # For the tracked_agent
   episode_rewards = 0 # For the tracked_agent
   while not done:
-    # Track the first agent we see if not tracking
-    # Note : len(decision_steps) = number of agents that requested a decision
+
     if tracked_agent == -1 and len(decision_steps) >= 1:
         
       #agent_id is an int vector of length batch size containing unique 
@@ -63,12 +62,12 @@ for episode in range(20):
       # across simulation steps. 
       #The batch size is number of agents requesting a decision since the 
       # last call to env.step()
-      tracked_agent = decision_steps.agent_id[0]
+      tracked_agent = decision_steps.agent_id[0] # Track the first agent
+      
     
-    # Generate an action for all agents
+    # Generate an action
     actionTuple = GetNextAction(decision_steps[0].obs[0])
-    #action = spec.create_random_action(len(decision_steps)) #This is where you put your algorithm
-    
+
     # Set the actions
     env.set_actions(behavior_name, actionTuple)
     
