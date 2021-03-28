@@ -55,7 +55,7 @@ for episode in range(20):
   episode_rewards = 0 # For the tracked_agent
   while not done:
     # Track the first agent we see if not tracking
-    # Note : len(decision_steps) = [number of agents that requested a decision]
+    # Note : len(decision_steps) = number of agents that requested a decision
     if tracked_agent == -1 and len(decision_steps) >= 1:
         
       #agent_id is an int vector of length batch size containing unique 
