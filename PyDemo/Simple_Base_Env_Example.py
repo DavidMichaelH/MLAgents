@@ -4,7 +4,7 @@ import numpy as np
 
 # UnityEnvironment is the main interface between the Unity application
 # and your Python code
-env = UnityEnvironment(file_name="D:/UnityProjects/PlatformFighter/Build/PlatformFighter", seed=1, side_channels=[])
+env = UnityEnvironment(file_name="PATH TO UNITY BINARY", seed=1, side_channels=[])
 
 env.reset()
 
