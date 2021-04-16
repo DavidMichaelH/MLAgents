@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Mar 27 20:12:32 2021
+
+@author: dmike
+"""
+
 from mlagents_envs.environment import UnityEnvironment
 from mlagents_envs import base_env
 import numpy as np 
